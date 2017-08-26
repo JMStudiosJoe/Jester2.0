@@ -37,24 +37,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Jester" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ji1-TS-m5z">
-                                <rect key="frame" x="126" y="323" width="123" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JesterFace" translatesAutoresizingMaskIntoConstraints="NO" id="7RA-2z-dQj">
+                                <rect key="frame" x="117" y="242" width="140" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="7LD-dX-dXT"/>
+                                    <constraint firstAttribute="height" constant="200" id="hJ5-4n-dtU"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Jester contains explicit content. All jokes and riddles are welcome since that is all they are. Hope you enjoy" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0F7-UX-55k">
+                                <rect key="frame" x="67" y="484" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="oer-G6-KYw"/>
+                                    <constraint firstAttribute="width" constant="240" id="zdG-z1-1ho"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4H1-0J-38E">
+                                <rect key="frame" x="156" y="620" width="62" height="30"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Jester" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ji1-TS-m5z">
+                                <rect key="frame" x="97" y="169" width="181" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="181" id="Q5F-im-cce"/>
+                                    <constraint firstAttribute="height" constant="52" id="kzl-j1-Pgp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.38348246280908493" green="0.21786951269528754" blue="0.60267568005181349" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ji1-TS-m5z" firstAttribute="top" secondItem="TT2-GE-Dgz" secondAttribute="bottom" constant="259" id="1vt-fc-LN8"/>
+                            <constraint firstItem="Ji1-TS-m5z" firstAttribute="top" secondItem="TT2-GE-Dgz" secondAttribute="bottom" constant="105" id="1vt-fc-LN8"/>
+                            <constraint firstItem="rSh-LO-SQS" firstAttribute="top" secondItem="4H1-0J-38E" secondAttribute="bottom" constant="17" id="Em4-Nv-eHN"/>
+                            <constraint firstItem="0F7-UX-55k" firstAttribute="centerX" secondItem="8jU-af-GOW" secondAttribute="centerX" id="RcF-Vz-c9i"/>
+                            <constraint firstItem="7RA-2z-dQj" firstAttribute="centerX" secondItem="8jU-af-GOW" secondAttribute="centerX" id="XZl-8x-b1j"/>
+                            <constraint firstItem="0F7-UX-55k" firstAttribute="top" secondItem="TT2-GE-Dgz" secondAttribute="bottom" constant="420" id="aBf-NL-RTp"/>
+                            <constraint firstItem="7RA-2z-dQj" firstAttribute="top" secondItem="TT2-GE-Dgz" secondAttribute="bottom" constant="178" id="gdm-SQ-A2T"/>
                             <constraint firstItem="Ji1-TS-m5z" firstAttribute="centerX" secondItem="8jU-af-GOW" secondAttribute="centerX" id="ryk-TA-FWb"/>
+                            <constraint firstItem="4H1-0J-38E" firstAttribute="centerX" secondItem="8jU-af-GOW" secondAttribute="centerX" id="zSz-9M-t0B"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QRP-xg-Tkl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrp-oq-w8D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-858" y="112"/>
+            <point key="canvasLocation" x="-858.39999999999998" y="111.99400299850076"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FdA-7C-RlL">
+            <objects>
+                <viewController id="ePT-Pf-siV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6PG-OG-92O"/>
+                        <viewControllerLayoutGuide type="bottom" id="wHe-N5-btf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="reo-29-7GL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i8k-cZ-OpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="112"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="JesterFace" width="125" height="192"/>
+    </resources>
 </document>
