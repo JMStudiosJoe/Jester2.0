@@ -10,5 +10,7 @@ import Foundation
 
 class Enigma {
     var type: String = ""
-
+    var intro: String = ""
+    var answer: String? = ""
+    var explicit: Bool = false
 }

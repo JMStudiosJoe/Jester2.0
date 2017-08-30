@@ -8,6 +8,7 @@
 
 import Foundation
 
+var JestBag = [Enigma]()
 
 func getJoke() -> String {
     return "this app is a joke"
