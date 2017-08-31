@@ -28,7 +28,7 @@
         <!--Warning View Controller-->
         <scene sceneID="0GY-gi-i16">
             <objects>
-                <viewController id="62g-kT-PO5" customClass="WarningViewController" sceneMemberID="viewController">
+                <viewController id="62g-kT-PO5" customClass="WarningViewController" customModule="Jester2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TT2-GE-Dgz"/>
                         <viewControllerLayoutGuide type="bottom" id="rSh-LO-SQS"/>
@@ -59,6 +59,9 @@
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ePT-Pf-siV" kind="show" id="ZJB-ge-lAI"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Jester" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ji1-TS-m5z">
                                 <rect key="frame" x="97" y="169" width="181" height="52"/>
@@ -89,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="-858.39999999999998" y="111.99400299850076"/>
         </scene>
-        <!--View Controller-->
+        <!--Jester View Controller-->
         <scene sceneID="FdA-7C-RlL">
             <objects>
-                <viewController id="ePT-Pf-siV" sceneMemberID="viewController">
+                <viewController id="ePT-Pf-siV" customClass="JesterViewController" customModule="Jester2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6PG-OG-92O"/>
                         <viewControllerLayoutGuide type="bottom" id="wHe-N5-btf"/>
@@ -100,15 +103,58 @@
                     <view key="view" contentMode="scaleToFill" id="reo-29-7GL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="JoG-Ub-rqU">
+                                <rect key="frame" x="16" y="96" width="343" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="T5a-5M-XZz"/>
+                                    <constraint firstAttribute="width" constant="343" id="faX-oP-Jrd"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YNo-37-RlX">
+                                <rect key="frame" x="16" y="261" width="343" height="153"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="jk3-zT-Pcl"/>
+                                    <constraint firstAttribute="height" constant="153" id="lAv-hP-OKs"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbw-H3-btY">
+                                <rect key="frame" x="158.5" y="617" width="57" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="GML-Sd-3nt"/>
+                                    <constraint firstAttribute="height" constant="30" id="YfT-Zb-tgX"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Random"/>
+                                <connections>
+                                    <action selector="nextRandomEnigma:" destination="ePT-Pf-siV" eventType="touchUpInside" id="N9J-P5-Pfn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.49146799270000002" green="0.2319316806" blue="0.81164993519999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YNo-37-RlX" firstAttribute="centerX" secondItem="reo-29-7GL" secondAttribute="centerX" id="2eg-bE-W1e"/>
+                            <constraint firstItem="JoG-Ub-rqU" firstAttribute="centerX" secondItem="reo-29-7GL" secondAttribute="centerX" id="4xw-h4-dhD"/>
+                            <constraint firstItem="wHe-N5-btf" firstAttribute="top" secondItem="fbw-H3-btY" secondAttribute="bottom" constant="20" id="67O-U7-DEk"/>
+                            <constraint firstItem="fbw-H3-btY" firstAttribute="centerX" secondItem="reo-29-7GL" secondAttribute="centerX" id="Tm7-ah-Iaj"/>
+                            <constraint firstItem="JoG-Ub-rqU" firstAttribute="top" secondItem="6PG-OG-92O" secondAttribute="bottom" constant="32" id="lum-Oe-iB3"/>
+                            <constraint firstItem="YNo-37-RlX" firstAttribute="top" secondItem="6PG-OG-92O" secondAttribute="bottom" constant="197" id="sjb-wQ-gKF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="intro" destination="YNo-37-RlX" id="G0y-hf-gVi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8k-cZ-OpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="112"/>
+            <point key="canvasLocation" x="60" y="111.99400299850076"/>
         </scene>
     </scenes>
     <resources>
         <image name="JesterFace" width="125" height="192"/>
+        <image name="banner" width="300" height="100"/>
     </resources>
 </document>

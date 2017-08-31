@@ -1,22 +1,29 @@
 //
-//  WarningViewController.swift
+//  JesterViewController.swift
 //  Jester2.0
 //
-//  Created by Joseph Richardson on 8/25/17.
+//  Created by Joseph Richardson on 8/30/17.
 //  Copyright © 2017 Joseph Richardson. All rights reserved.
 //
 
 import UIKit
 
-class WarningViewController: UIViewController {
+class JesterViewController: UIViewController {
+    @IBOutlet weak var intro: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getJoke()
-        getJoke()
-        // Do any additional setup after loading the view.
+        getNextRandomEnigma()
     }
-
+    
+    func getNextRandomEnigma() {
+        let enigma: Enigma = getEnigma()
+        intro.text = enigma.intro
+    }
+    
+    @IBAction func nextRandomEnigma(_ sender: Any) {
+        getNextRandomEnigma()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

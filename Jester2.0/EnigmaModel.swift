@@ -13,4 +13,11 @@ class Enigma {
     var intro: String = ""
     var answer: String? = ""
     var explicit: Bool = false
+    
+    init(intro: String, explicit: Bool = false, answer: String, type: String) {
+        self.intro = intro
+        self.explicit = explicit
+        self.answer = answer
+        self.type = type
+    }
 }
